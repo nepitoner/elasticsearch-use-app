@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: product-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/products_service
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
+  liquibase:
+    enabled: true
+    change-log: db/changelog/db.changelog-master.yaml
+    default-schema: products_db
+    drop-first: false
+
+elasticsearch:
+  port: 9200
+  host: localhost
