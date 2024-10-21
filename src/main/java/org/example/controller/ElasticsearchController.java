@@ -32,8 +32,8 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 public class ElasticsearchController {
     private final ElasticsearchFacade elasticsearchFacade;
 
-    @PostMapping(value = "/index/activity/sku-date", produces = APPLICATION_JSON_VALUE)
-    @Operation(summary = "Starting indexing for products by activity and skus by added date")
+    @PostMapping(value = "/index/activity/quantity", produces = APPLICATION_JSON_VALUE)
+    @Operation(summary = "Starting indexing for products by activity and skus by available quantity")
     public ResponseEntity<SuccessesIndexResponse> indexProductsByActivityAndSkusAvailableQuantity(
             @RequestParam @NotNull boolean active,
             @RequestParam @NotNull int availableQuantity) {
