@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/create_schema_changeset.sql
+  - include:
+      file: db/changelog/changeset/create_products_table_changeset.sql
+  - include:
+      file: db/changelog/changeset/create_skus_table_changeset.sql
